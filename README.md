@@ -1,5 +1,18 @@
 # React + Vite
 
+## Deploying to a shared host
+
+The GitHub Actions workflow builds the app and deploys `dist/` to the shared host over FTPS when code is pushed to `main`. It can also be started manually from the repository's Actions tab.
+
+Add these repository secrets under **Settings → Secrets and variables → Actions**:
+
+- `FTP_SERVER`: the host name of the FTP server
+- `FTP_USERNAME`: the FTP account username
+- `FTP_PASSWORD`: the FTP account password
+- `FTP_SERVER_DIR`: the target directory on the server, including a trailing slash (for example, `public_html/`)
+
+The host must support FTPS. The workflow uses the configured target directory as its deployment destination.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
