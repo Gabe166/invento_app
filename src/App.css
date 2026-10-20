@@ -1,0 +1,467 @@
+#root {
+    min-height: 100vh;
+}
+
+.app-shell {
+    min-height: 100vh;
+    padding: 0 24px 64px;
+    background:
+        radial-gradient(ellipse at 50% -18%, rgba(218, 229, 255, 0.68), transparent 42%),
+        #f5f7fb;
+    color: #172033;
+}
+
+.app-container {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+}
+
+.topbar {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: #315de8;
+    box-shadow: 0 5px 12px rgba(49, 93, 232, 0.2);
+}
+
+.brand-mark svg {
+    width: 21px;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+.brand-name {
+    font-size: 17px;
+    font-weight: 750;
+    letter-spacing: -0.045em;
+}
+
+.topbar-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-label {
+    color: #748096;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.product-count {
+    min-width: 28px;
+    height: 28px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 8px;
+    border: 1px solid #e3e8f1;
+    border-radius: 9px;
+    background: #fff;
+    color: #34415a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.page-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 48px 0 28px;
+}
+
+.eyebrow,
+.panel-kicker {
+    margin: 0 0 10px;
+    color: #71809a;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+}
+
+.page-intro h2 {
+    margin: 0;
+    color: #182238;
+    font-size: clamp(27px, 4vw, 34px);
+    font-weight: 720;
+    letter-spacing: -0.055em;
+    line-height: 1.15;
+}
+
+.page-description {
+    margin: 10px 0 0;
+    color: #77839a;
+    font-size: 14px;
+}
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+    padding: 9px 12px;
+    border: 1px solid #e4eaf2;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    color: #65728a;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.availability-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #31b67a;
+    box-shadow: 0 0 0 3px #e4f7ee;
+}
+
+.inventory-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.65fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.panel {
+    min-width: 0;
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 9px 30px rgba(25, 42, 75, 0.045);
+}
+
+.create-panel {
+    padding: 25px;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.panel-kicker {
+    margin-bottom: 7px;
+    color: #8a95a9;
+    font-size: 9px;
+}
+
+.panel-heading h2 {
+    margin: 0;
+    color: #1c2940;
+    font-size: 18px;
+    font-weight: 680;
+    letter-spacing: -0.035em;
+}
+
+.add-icon {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #edf2ff;
+    color: #315de8;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.panel-description {
+    margin: 9px 0 22px;
+    color: #8490a4;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.field-label {
+    margin: 0 0 7px;
+    color: #45516a;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.form-input {
+    width: 100%;
+    height: 42px;
+    margin: 0 0 17px;
+    padding: 0 12px;
+    border: 1px solid #dfe5ee;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: #253149;
+    font: inherit;
+    font-size: 12px;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-input::placeholder {
+    color: #a4adbc;
+}
+
+.form-input:focus {
+    border-color: #7290f4;
+    box-shadow: 0 0 0 3px rgba(74, 111, 235, 0.12);
+}
+
+.submit-button {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 9px;
+    background: #315de8;
+    box-shadow: 0 5px 12px rgba(49, 93, 232, 0.18);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.submit-button span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.submit-button:hover {
+    transform: translateY(-1px);
+    background: #244fd6;
+    box-shadow: 0 7px 15px rgba(49, 93, 232, 0.24);
+}
+
+.submit-button:focus-visible,
+.delete-button:focus-visible {
+    outline: 3px solid rgba(49, 93, 232, 0.28);
+    outline-offset: 2px;
+}
+
+.products-panel {
+    overflow: hidden;
+}
+
+.products-heading {
+    min-height: 86px;
+    padding: 20px 24px;
+}
+
+.table-count {
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #f1f4f9;
+    color: #6e7b92;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.empty-state {
+    min-height: 284px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 24px 38px;
+    border-top: 1px solid #edf0f5;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    background: #f1f4fb;
+}
+
+.empty-icon svg {
+    width: 24px;
+    stroke: #8896ad;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.4;
+}
+
+.empty-state h3 {
+    margin: 0;
+    color: #35415a;
+    font-size: 14px;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+}
+
+.empty-state p {
+    margin: 7px 0 0;
+    color: #8b96a9;
+    font-size: 12px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    border-top: 1px solid #edf0f5;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.inventory-table th {
+    height: 43px;
+    padding: 0 24px;
+    background: #fafbfd;
+    color: #8994a7;
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: 0.025em;
+}
+
+.inventory-table td {
+    height: 61px;
+    padding: 0 24px;
+    border-top: 1px solid #f0f2f6;
+    color: #58647a;
+    font-size: 12px;
+}
+
+.inventory-table .product-name {
+    color: #2c3850;
+    font-weight: 620;
+}
+
+.quantity-badge {
+    min-width: 32px;
+    display: inline-grid;
+    place-items: center;
+    padding: 5px 8px;
+    border-radius: 7px;
+    background: #eff3ff;
+    color: #4164d5;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.action-cell {
+    width: 1%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.delete-button {
+    padding: 6px 9px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: transparent;
+    color: #b0636c;
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 150ms ease, color 150ms ease;
+}
+
+.delete-button:hover {
+    background: #fff1f1;
+    color: #a83d4a;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (max-width: 760px) {
+    .inventory-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .create-panel {
+        padding: 22px;
+    }
+
+    .page-intro {
+        padding-top: 38px;
+    }
+}
+
+@media (max-width: 520px) {
+    .app-shell {
+        padding: 0 16px 40px;
+    }
+
+    .topbar {
+        min-height: 72px;
+    }
+
+    .topbar-label {
+        max-width: 104px;
+        font-size: 11px;
+        text-align: right;
+    }
+
+    .page-intro {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        padding: 34px 0 22px;
+    }
+
+    .page-description {
+        max-width: 260px;
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .products-heading {
+        min-height: 78px;
+        padding: 17px 18px;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+}
